@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Listado de visitas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script></script>
+
+	<!-- Template Main Stylesheets -->
+	<link rel="stylesheet" href="estilo.css" type="text/css">	
+</head>
+        
+
+
+<body>
+    <div class="superior">
+        <nav>
+            Listado Visitas |
+            <a href="index.html">Home</a>  | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="crearcapacitacion.html">Crear capacitacion</a> |
+            <a href="crearusuario.html">Crear usuario</a> |
+            <a href="crearasesorias.html">Crear Asesorias</a> |
+            <a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+            <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+            <a href="listadousuarios.html">Listado usuarios</a> |
+            <a href="listadoasesorias.html">Listado Asesorias</a> |
+            <a href="administrarasistente.html">Administrar Asistentes</a> |
+            <a href="listadopago.html">Listado Pagos</a> |
+            <a href="reportes.html">Reportes</a> |
+            <a href="login.html">Ingresa a tu Cuenta</a>
+         </nav>
+    
+        <div class="encabezado">
+            
+            <h1>Listado de Visitas</h1>
+           
+        </div>
+    </div>
+
+    
+    <div class="medio">
+
+        <table class="tabla">
+                                          
+            <tr class="campos">
+              <th>ID Visita</th>
+              <th>Rut</th>
+              <th>Nombre Cliente</th>
+              <th>Fecha visita</th> 
+              <th>Hora visita</th>
+              <th>Chequeo</th>
+            </tr>
+
+            <tr class="datos">
+                <td>vis-1111<t/d>
+                <td>25.697.835-0</td>
+                <td>cesar celimen<t/d>
+                <td>07-12-20</td>
+                <td>13:30 pm</td>
+            
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+              <td><a href="responderchecklist.html" id="confirm" class="btn btn-success" >chequeo</a></td>
+              <script>
+                  $("#confirm").click(function(){
+                  var bool=confirm("Desea validar y modificar los chequeos de esta visita?");
+                  if(bool){
+                      return true;  
+                  }else{
+                      alert("cancelo la solicitud");
+                      return false;                                       
+                  }
+                  });
+               </script> 
+          </tr>
+
+        </table>
+
+    
+    </div>
+    
+</body>
+</html>

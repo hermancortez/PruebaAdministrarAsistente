@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Login</title>
+        <link rel="stylesheet" href="estilo.css"/>
+
+        <script src="js/scriptlogin.js"></script>
+    </head>
+    <body>
+
+       
+        <div class="superior">
+                <nav>
+                    Ingresa a tu cuenta | 
+                    <a href="index.html">Home</a>  | 
+                    <a href="contacto.html">Contacto</a> | 
+                    <a href="crearcapacitacion.html">Crear capacitacion</a> |
+                    <a href="crearusuario.html">Crear usuario</a> |
+                    <a href="crearasesorias.html">Crear Asesorias</a> |
+                    <a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+                    <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+                    <a href="listadousuarios.html">Listado usuarios</a> |
+                    <a href="listadoasesorias.html">Listado Asesorias</a> |
+                    <a href="administrarasistente.html">Administrar Asistentes</a> |
+                    <a href="listadovisitas.html">Listado visitas</a> |
+                    <a href="listadopago.html">Listado Pagos</a> |
+                    <a href="reportes.html">Reportes</a> |
+ 
+                </nav>
+                <br><br>
+                <div class="encabezado">
+                    
+                    <h1>Ingresa a tu cuenta</h1>                
+                   
+                </div>
+         
+
+        </div>   
+        <br><br>
+        <div class="contenedor"> 
+
+            <div class="formulario">
+
+
+                <form method="post" action="#" id="formulario">
+
+                    <div class="campo">
+                        <label for="rut">Ingresa tu Rut</label>
+                       <input type="text" id="rut" name="Rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+                                                                         
+                    </div>
+
+                    <div class="campo">
+                        <label for="contrasena">Ingresa tu contraseña</label>
+                        <input type="text" id="contrasena"  name="contrasena"  required oninput="checkContrasena(this)" placeholder="Ingrese contraseña" >
+                    </div>
+                    
+                                                    
+                    <div class="botones">
+                        <button type="submit">Validar</button>
+                    </div> 
+
+                </form>
+                   
+            </div>       
+
+        </div>
+    </body>
+</html>

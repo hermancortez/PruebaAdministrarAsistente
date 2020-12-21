@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	<title>Registrar usuario</title>
+	<link href="favicon.html" rel="icon">	
+	<link rel="stylesheet" href="estilo.css" type="text/css">	
+</head>
+
+
+<body>
+
+	<div class="superior">
+		<nav>
+			Crear Usuario |
+			<a href="index.html">Home</a>  | 
+			<a href="contacto.html">Contacto</a> | 
+			<a href="crearcapacitacion.html">Crear capacitacion</a> |
+			<a href="crearasesorias.html">Crear Asesorias</a> |	
+			<a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+			<a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+			<a href="listadousuarios.html">Listado usuarios</a> |
+			<a href="listadovisitas.html">Listado visitas</a> |
+			<a href="listadoasesorias.html">Listado Asesorias</a> |
+			<a href="administrarasistente.html">Administrar Asistentes</a> |
+			<a href="listadopago.html">Listado Pagos</a> |
+			<a href="reportes.html">Reportes</a> |
+			<a href="login.html">Ingresa a tu Cuenta</a>
+  
+		</nav>
+
+		<div class="encabezado">
+
+			<h1>Registrar usuario</h1>
+			   
+		</div>
+
+	</div>
+
+
+	<div class="formulario">
+		<form method="post" action="#" id="formulario">
+			<div class="campo">
+				<label for="Nombre">Nombre:</label>
+				 <input type="text" id="Nombre" required/>
+			</div>
+
+			<div class="campo">
+				<div class="en-linea izquierdo">
+					<label for="apellidos">Apellidos:</label>
+					<input type="text" id="apellidos" required/>
+				</div>
+					<br><br>
+				<div class="en linea">
+					<label for="fecha">Fecha de nacimiento:</label>
+					<input type="date" id="fecha" required/>
+				</div>
+			</div>
+
+			<div class="campo">
+				<div class="en-linea izquierdo">
+
+					Tipo de usuario
+
+					<select class="form-control" name="tipoUsuario"  required data-error="Por favor selecciona una opci&oacute;n">
+						<option></option>
+						<option>Administrativo</option>  
+						<option>Cliente</option>                                                                                                                                
+						<option>Profesional</option>                                                                              
+					</select>
+				</div>
+			</div>
+
+			<div class="botones"> 
+				<input type="submit" id="boton-enviar" value="Guardar"/>
+				<p class="mensaje" id="mensaje"></p>
+			</div>
+		</form>
+  
+	</div>
+   
+</body>
+	
+</html>

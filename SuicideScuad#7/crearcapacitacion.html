@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+	    <meta charset="utf-8">
+	    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+	    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="estilo.css" type="text/css">	
+        <title>Registro de capacitacion</title>
+	
+    </head>
+
+    <body>
+        <div class="superior">
+            <nav>
+                Crear Capacitacion |
+                <a href="index.html">Home</a> | 
+                <a href="contacto.html">Contacto</a> | 
+                <a href="crearusuario.html">Crear usuario</a> |
+                <a href="crearasesorias.html">Crear Asesorias</a> |
+                <a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+                <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+                <a href="listadousuarios.html">Listado usuarios</a> |
+                <a href="listadovisitas.html">Listado visitas</a> |
+                <a href="listadoasesorias.html">Listado Asesorias</a> |
+                <a href="administrarasistente.html">Administrar Asistentes</a> |
+                <a href="listadopago.html">Listado Pagos</a> |
+                <a href="reportes.html">Reportes</a> |
+                <a href="login.html">Ingresa a tu Cuenta</a> 
+             </nav>
+         
+            <div class="encabezado">
+
+                <h1>Registro de capacitación</h1>
+               
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <div class="formulario">
+				<form method="post" action="#" id="formulario">
+                    <div class="campo">
+                         <label for="Nombre">Nombre y apellido:</label>
+                         <input type="text" id="Nombre" required/>
+                    </div>
+                <div class="campo">
+                	<div class="en-linea izquierdo">
+						<label for="lugar">Lugar</label>
+						<input type="text" id="lugar" required/>
+				    </div>
+                    <br><br>
+					<div class="en linea">
+						<label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" required/>
+					</div>
+				</div>
+
+                <div class="campo">
+                    <div class="en-linea izquierdo">
+						<label for="duracion">Duración:</label>
+						<input type="time" id="duracion" required/>
+                    </div>
+                        
+                    <div class="en-linea">
+						<label for="hora">Comentario:</label>
+						<input type="text" id="comentario" required/>
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <input type="submit" id="boton-enviar" value="Enviar"/>
+                    <p class="mensaje" id="mensaje"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

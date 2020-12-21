@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>    
+	<title>Realizar Pago</title> 
+   
+  	<link rel="stylesheet" href="estilo.css" type="text/css">	
+  	<script type="text/javascript" src="js/clase5.js"></script>
+</head>
+
+<body>
+	<div class="superior">
+				
+		<nav>
+			Realizar Pagos |
+            <a href="listadopago.html">Volver</a> |
+
+		</nav>
+	
+		<div class="encabezado">
+		
+			<h1 id="titulo">Realizar Pagos</h1>
+	   
+		</div>
+	</div>
+
+	<div class="formulario">
+
+		<form method="post" action="#" id="formulario" >
+
+			<div class="campo" style="text-align:left "  >
+
+				<label for="RUT">RUT CLIENTE:</label>
+				<input type="text" id="rut" placeholder="XX.XXX.XXX-X" required maxlength="10" minlength="9"/>
+				<br><br>
+
+				<label for="PAGO">MONTO DEL PAGO:</label>
+                <input type="text" id="pago" value= "1" min="0" max=" 99999999" required/>
+				<br><br>
+
+				<label for="Mes">Mes:</label>
+				<select class="form-control" name="tipoUsuario" id="mes"  required>
+					<option>Enero</option>
+					<option>Febrero</option>  
+					<option>Marzo</option>                                                                                                                                
+					<option>Abril</option>
+					<option>Mayo</option>
+					<option>Junio</option>  
+					<option>Julio</option>                                                                                                                                
+					<option>Agosto</option> 
+					<option>Septiembre</option>
+					<option>Octubre</option>  
+					<option>Noviembre</option>                                                                                                                                
+					<option>Diciembre</option>                                                                              
+				</select>
+				<br><br>
+
+				<label for="Año">Año:</label>
+				<select class="form-control" name="ano" id="ano" required>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+					<option>2020</option> 
+					<option>2021</option>
+					<option>2022</option>
+					<option>2023</option>
+					<option>2024</option>
+					<option>2025</option>
+					<option>2026</option>
+					<option>2027</option>
+					<option>2028</option>
+					<option>2029</option>
+					<option>2030</option>
+					<option>2031</option> 
+					<option>2032</option>
+					<option>2033</option>
+					<option>2034</option>
+					<option>2035</option>
+					<option>2036</option>
+					<option>2037</option>
+					<option>2038</option>
+					<option>2039</option>
+					<option>2040</option>
+					<option>2041</option>
+					<option>2042</option> 
+					<option>2043</option>
+					<option>2044</option>
+					<option>2045</option>
+					<option>2046</option>
+					<option>2047</option>
+					<option>2048</option>
+					<option>2049</option>
+					<option>2050</option>                                                                            
+				</select>
+				<br><br>
+
+				<label for="fechaActual">fecha Actual:</label>
+				<input type="date" id="start" name="trip-start"  min="2010-12-31" max="2050-12-31" required>
+			
+			</div>
+
+
+        	<br><br> 
+
+			<div class="botones" > 
+					
+				<input type="button" id="boton-pagar" value="Pagar"  onclick="validardos();" />
+					
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>

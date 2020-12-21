@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	<title>Crear Asesorias</title>	
+	<link rel="stylesheet" href="estilo.css" type="text/css">	
+	
+</head>
+<body>
+    <div class="superior">
+        <nav>
+            Crear Asesorias | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="crearcapacitacion.html">Crear capacitacion</a> |
+            <a href="crearusuario.html">Crear usuario</a>  |
+            <a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+            <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+            <a href="listadousuarios.html">Listado usuarios</a> |
+            <a href="listadovisitas.html">Listado visitas</a>|
+            <a href="listadoasesorias.html">Listado Asesorias</a> |
+            <a href="administrarasistente.html">Administrar Asistentes</a> |
+            <a href="listadopago.html">Listado Pagos</a> |
+            <a href="reportes.html">Reportes</a> | 
+            <a href="login.html">Ingresa a tu Cuenta</a>
+        </nav> 
+
+        <div class="encabezado">    
+            <h1>Crear asesoria</h1>               
+        </div>
+    </div>
+
+    <div class="formulario">
+        <form method="post" action="#" id="formulario">
+
+            <div class="campo">
+                <label for="id_cliente">ID_Cliente</label>
+                <input type="text" id="id_cliente" required/>
+            </div>
+
+            <div class="campo">
+                <div class="en-linea izquierdo">
+                  <label for="fecha">Fecha asesoria:</label>
+                  <input type="date" id="fecha" required/>
+                </div>
+            </div>
+
+            <div class="campo">
+                <div class="en linea">
+                    <label for="nombre">Nombre cliente:</label>
+                    <input type="text" id="nombre" required/>
+                </div>
+            </div>
+
+            <div class="campo">
+                <div class="en-linea izquierdo">
+                  <label for="nombre">Nombre profesional:</label>
+                  <input type="text" id="nombre" required/>
+                </div>                        
+            </div>
+
+            <div class="botones">
+                <input type="submit" id="boton-enviar" value="Agregar"/>
+                <p class="mensaje" id="mensaje"></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

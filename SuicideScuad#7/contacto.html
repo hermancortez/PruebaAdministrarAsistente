@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	
+	
+		
+	<link rel="stylesheet" href="estilo.css" type="text/css">	
+	
+  </head>
+
+
+
+
+    <body>
+        <div class="superior">
+           
+            <nav>
+                Contacto |
+                <a href="index.html">Home</a>  | 
+                <a href="crearcapacitacion.html">Crear capacitacion</a> |
+                <a href="crearusuario.html">Crear usuario</a>  |
+                <a href="crearasesorias.html">Crear Asesorias</a>  |
+                <a href="listadoaccidentes.html">Ingresar Accidentes</a>  |
+                <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+                <a href="listadousuarios.html">Listado usuarios</a> |
+                <a href="listadovisitas.html">Listado visitas</a>|
+                <a href="listadoasesorias.html">Listado Asesorias</a> |
+                <a href="administrarasistente.html">Administrar Asistentes</a> |
+                <a href="listadopago.html">Listado Pagos</a> |
+                <a href="reportes.html">Reportes</a> |
+                <a href="login.html">Ingresa a tu Cuenta</a>
+                
+             </nav>
+             
+            <div class="encabezado">
+    
+                <h1>Formulario de contacto</h1>
+               
+            </div>
+        </div>
+
+
+        <div class="formulario">
+			<form method="post" action="#" id="formulario">
+                <div class="campo">
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" id="Nombre" required/>
+                </div>
+
+                <div class="campo">
+                    <div class="en-linea izquierdo">
+						<label for="email">Correo electrónico:</label>
+						<input type="email" id="email" required/>
+					</div>
+
+					<div class="en linea">
+						<label for="telefono">Telefono:</label>
+						<input type="number" id="telefono" required/>
+					</div>
+				</div>
+
+                <div class="campo">
+                    <div class="en-linea izquierdo">
+						<label for="asunto">Asunto:</label>
+						<input type="text" id="asunto" required/>
+                    </div>
+                        
+                    <div class="en-linea">
+					    <label for="comentario">Comentario:</label>
+					    <input type="text" id="conemtario" required/>
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <input type="submit" id="boton-enviar" value="Enviar"/>
+                    <p class="mensaje" id="mensaje"></p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
