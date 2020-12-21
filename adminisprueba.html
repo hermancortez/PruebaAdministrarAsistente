@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>   
+    <!-- <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+   
+<script src="script_ad.js"> </script>
+   <link rel="stylesheet" href="estilo_ad.css" type="text/css">	
+   
+    <title>prueba</title>
+
+     
+    
+
+
+    <style> 
+        #ocultar {
+          width: 800px;
+          height: 350px;
+          background-color: lightblue;
+        }
+    </style>
+        <style> 
+         #ocultar {visibility: hidden;
+        }
+        </style>
+</head>
+
+
+<body>
+
+    <div class="superior">
+		<nav>
+			Listado Asistentes |
+			<a href="index.html">Home</a>  | 
+			<a href="contacto.html">Contacto</a> | 
+			<a href="crearcapacitacion.html">Crear capacitacion</a> |
+			<a href="crearusuario.html">Crear usuario</a> |
+			<a href="crearasesorias.html">Crear Asesorias</a> |
+			<a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+			<a href="listadovisitas.html">Listado visitas</a> |
+			<a href="listadoasesorias.html">Listado Asesorias</a> |
+			<a href="crearpago.html">Realizar Pagos</a> |
+            <a href="reportes.html">Reportes</a> 
+		 </nav>
+	
+	
+		<div class="encabezado">
+			
+			<h1>Listado de Asistentes</h1>
+		   
+		</div>
+    </div>
+    <br></br>
+    <div class="medio">
+		
+		<table class="tabla">
+
+			<tr class="campos">
+				<th>Id asistente</th>
+				<th>correo electronico</th> 
+				<th>Telefono</th>
+	
+			</tr>
+			<tr class="datos">
+				<td>25.697.835-0<t/d>
+				<td>cesar@celimen</td>
+				<td>+569 91929394</td>
+				
+			</tr>
+
+			<tr class="datos">
+				<td>24.111.333-0<t/d>
+				<td>edgar@torres </td>
+				<td>+569 91929394</td>
+				 
+			</tr>
+
+			<tr class="datos" >
+				<td>14.345.999-k<t/d>
+				<td>las@marias </td>
+				<td>+569 91929394</td>
+				
+			</tr>
+	   	</table>
+    </div>
+   <br></br>  
+
+
+
+
+    <button id="myBtn" onclick="mostrarFormulario()"> Agregar Asistentes </button>
+        <br><br>
+       
+        <div id="ocultar"> 
+                <div id="mostrar"> 
+                    <div class="formulario">
+                        <form method="post" action="#" id="formulario">
+    
+                            <div class="campo">
+                                <div class="en-linea izquierda">
+                                    <label for="id_asistente">id_asistente: </label>
+                                    <input type="number" id="id_asistente" value= "1" min="0" max=" 99999999"required/>
+                                    <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                </div>
+                            </div>
+    
+                            <div class="campo">
+                                <div class="en-linea izquierdo">
+                                    <label for="nombre completo">Nombres:</label>
+                                    <input type="text" id="nombres" minlength="0" maxlength="100" required/>
+                                    <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                </div>
+                                <div class="en-linea">
+                                    <label for="edad">edad:</label>
+                                    <input type="number" id="edad" value= "1" min="0" max="150" required/>
+                                    <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                </div>
+                                
+                            </div>
+                            
+                            
+                                <div class="campo">
+                                    <div class="en-linea izquierdo">  
+                                        <label for="email">C. Electrónico: </label>
+                                        <input type="email" id="email" required/>
+                                        <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    </div> 
+                                    <div class="en-linea">
+                                        <label for="telefono">Telefono: </label>
+                                        <input type="text" id="telefono" required/>
+                                        <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    </div>
+                                </div>
+                                <div class="campo">
+                                    <div class="en-linea izquierdo">  
+                                        <label for="hora">Hora de la Capacitacion:</label>
+                                        <input type="time" id="hora" required/>
+                                        <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    </div> 
+                                    <div class="en-linea">
+                                        <label for="fecha">Fecha:</label>
+                                        <input type="date" id="fecha" required/>
+                                        <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    </div>
+                                    <div class="en-linea">
+                                        <label for="relator">Facilitador:</label>
+                                        <input type="text" id="Facilitador" required/>
+                                        <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    </div>
+                                </div>
+    <br></br>
+
+                            <div class="botones">
+
+                                <input type="button" id="boton-enviar" value="Guardar"  onclick="validar_asis();" />
+                                <p class="mensaje" id="mensaje"></p>
+                            </div>
+                        </form>
+                    </div> 
+                    <br></br>
+                    
+                    <div class="botones">
+                        <input type="submit" id="boton-enviar" value="Registrarse"/>
+                        <p class="mensaje" id="mensaje"></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="botones">
+                <button id="boton-mostrar-datos" disabled>Mostrar datos</button>
+            </div>
+
+           
+                    <div class="botones">
+                        <button id="boton-listar-datos" disabled>Listar datos</button>
+                    </div>
+    
+                    <div class="division-tabla" id="division-tabla" hidden>
+                        <table id="tabla-datos-guardados">
+                            <thead>
+                                <tr>
+                                    <th>Id asistente</th>
+                                    <th>correo electronico</th> 
+                                    <th>Telefono</th>
+                                    <th>Agregar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        
+        </div>
+
+    
+</body>
+
+
+
+
+</html>
+
