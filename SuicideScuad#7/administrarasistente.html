@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>   
-    <!-- <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <!-- referencia para trabajar con jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
    
+    <!--referencias para trabajar con datatables -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+    <!--referencias para trabajar con javascript y con CSS -->
     <script src="js/script_ad.js"> </script>
     <link rel="stylesheet" href="estilo.css" type="text/css">
-   <link rel="stylesheet" href="estilo_ad.css" type="text/css">	
    
     <title>prueba</title>
 
@@ -63,33 +70,91 @@
 
     <div class="medio">
 		
-		<table class="tabla">
+		<table id="datatable" class="tabla" >
 
 			<tr class="campos">
 				<th>Id asistente</th>
 				<th>correo electronico</th> 
 				<th>Telefono</th>
-	
+                <th>Eliminar registro</th>
 			</tr>
 			<tr class="datos">
-				<td>25.697.835-0<t/d>
-				<td>cesar@celimen</td>
-				<td>+569 91929394</td>
+				<td>25.697.098-1<t/d>
+				<td>vanesa@mayonesa</td>
+                <td>+569 91929394</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+                
+                <tr class="datos">
+                    <td>20.145.776-3<t/d>
+                    <td>sinforoso@sinluz</td>
+                    <td>+569 23457394</td>
+                    <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+                    
+                </tr>
+            </tr>
+            <tr class="datos">
+				<td>25.234.835-2<t/d>
+				<td>carito@ortega</td>
+                <td>+569 23229394</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+				
+            </tr>
+
+            <tr class="datos">
+				<td>17.222.865-7<t/d>
+				<td>milagos@noahay</td>
+                <td>+569 96573034</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+                
+            </tr>
+
+            <tr class="datos">
+				<td>14.555.001-2<t/d>
+				<td>lampor@limpin</td>
+                <td>+569 76894321</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
 				
 			</tr>
+            <tr class="datos">
+				<td>11.433.789-2<t/d>
+				<td>cesar@celimen</td>
+                <td>+569 12679394</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+				
+            </tr>
+            
+            <tr class="datos">
+				<td>15.612.835-6<t/d>
+				<td>rosa@melameel</td>
+                <td>+569 66529394</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
 
-			<tr class="datos">
-				<td>24.111.333-0<t/d>
-				<td>edgar@torres </td>
-				<td>+569 91929394</td>
-				 
+                <tr class="datos">
+                    <td>25.697.835-0<t/d>
+                    <td>omar@sefue</td>
+                    <td>+569 91955634</td>
+                    <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+                    
+                </tr>	
 			</tr>
-
+			<tr class="datos">
+				<td>24.111.333-3<t/d>
+				<td>edgar@torres </td>
+				<td>+569 11933494</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+			</tr>
+            <tr class="datos">
+				<td>25.111.244-9<t/d>
+				<td>alan@brito</td>
+                <td>+569 51929332</td>
+                <td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
+				
+			</tr>
 			<tr class="datos" >
 				<td>14.345.999-k<t/d>
-				<td>las@marias </td>
+				<td>alas@marias </td>
 				<td>+569 91929394</td>
-				
+				<td><input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar"></td>
 			</tr>
 	   	</table>
     </div>
@@ -107,10 +172,10 @@
                 <form method="post" action="#" id="formulario" >
     
                     <div class="campo">
-                        <div class="en-linea izquierda">
+                        <div class="en-linea izquierdo">
                             <label for="id_asistente">id_asistente: </label>
                             <input type="number" id="id_asistente" value= "1" min="0" max=" 99999999"required/>
-                            <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                           
                         </div>
                     </div>
     
@@ -118,27 +183,26 @@
                         <div class="en-linea izquierdo">
                             <label for="nombre completo">Nombres:</label>
                                 <input type="text" id="nombres" minlength="0" maxlength="100" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                         </div>
                         <div class="en-linea">
                                 <label for="edad">edad:</label>
                                 <input type="number" id="edad" value= "1" min="0" max="150" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                         </div>
                                 
                     </div>
-                            
                             
                     <div class="campo">
                         <div class="en-linea izquierdo">  
                                 <label for="email">C. Electrónico: </label>
                                     <input type="email" id="email" required/>
-                                    <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                    
                         </div> 
                             <div class="en-linea">
                                 <label for="telefono">Telefono: </label>
                                 <input type="text" id="telefono" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                             </div>
                         </div>
 
@@ -146,20 +210,21 @@
                             <div class="en-linea izquierdo">  
                                 <label for="hora">Hora de la Capacitacion:</label>
                                 <input type="time" id="hora" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                             </div> 
                             <div class="en-linea">
                                 <label for="fecha">Fecha:</label>
                                 <input type="date" id="fecha" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                             </div>
                             <div class="en-linea">
                                 <label for="relator">Facilitador:</label>
                                 <input type="text" id="Facilitador" required/>
-                                <input type="reset" id="eliminar" class="btn btn-danger" value= "Eliminar">
+                                
                             </div>
                         </div>
                         <br></br>
+
 
                         <div class="botones">
 
@@ -171,33 +236,16 @@
 
                     <br></br>
                 </form>
-            </div>
-
-            <div class="botones">
-                <button id="boton-mostrar-datos" disabled>Mostrar datos</button>
-            </div>
-            <br><br>
-           
-            <div class="botones">
-                <button id="boton-listar-datos" disabled>Listar datos</button>
-            </div>
-    
-            <div class="division-tabla" id="division-tabla" hidden>
-                <table id="tabla-datos-guardados">
-                    <thead>
-                        <tr>
-                            <th>Id asistente</th>
-                            <th>correo electronico</th> 
-                            <th>Telefono</th>
-                            <th>Agregar</th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        </tbody>
-                </table>
-            </div>
+      
         </div>
     </div>
 </body>
+<script>
+$(document).ready( function () {
+    $('#datatable').DataTable();
+} );
+</script>
+
+
 </html>
 
