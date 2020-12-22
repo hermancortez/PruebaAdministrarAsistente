@@ -12,30 +12,21 @@
 </head>
 
 <body>
-    <div class="superior">
-        <nav>
-            Ingresar Accidentes |
-            <a href="index.html">Home</a>  |  
-            <a href="contacto.html">Contacto</a> | 
-            <a href="crearcapacitacion.html">Crear capacitacion</a> |
-            <a href="crearusuario.html">Crear usuario</a>  |
-            <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
-            <a href="listadousuarios.html">Listado usuarios</a> |
-            <a href="listadovisitas.html">Listado visitas</a> |
-            <a href="listadoasesorias.html">Listado Asesorias</a> |
-            <a href="administrarasistente.html">Administrar Asistentes</a> |
-            <a href="listadopago.html">Listado Pagos</a> |
-            <a href="reportes.html">Reportes</a> |
-            <a href="login.html">Ingresa a tu Cuenta</a>
-        </nav> 
 
-        <div class="encabezado">    
-            <h1>Ingresar Accidente</h1>               
+    <div class="superior">
+		<nav> Listado de chequeos |
+			<a href="listadovisitas.html">Volver</a> 
+		</nav> 
+		<div class="encabezado">
+	
+			<h1>Listado de chequeos</h1>
+			
         </div>
+        
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <td><a href="#" id="confirm" class="btn btn-success" >chequeo</a></td>
+
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -49,18 +40,6 @@
             });
         });
     </script>
-
-    <div class="superior">
-		<nav> Listado de chequeos |
-			<a href="listadovisitas.html">Volver</a> 
-		</nav> 
-		<div class="encabezado">
-	
-			<h1>Listado de chequeos</h1>
-			
-        </div>
-        
-    </div>
 
     <br><br>
 
@@ -79,9 +58,18 @@
             <input type="checkbox" name="check[]" value="Control de inventario y fechas" id="chk10"><label for="chk10">Control de inventario y fechas</label><br>
         
 
-            <br>
-            <div >Checkboxs seleccionados : <span id="arr"></span></div>
+            <br><br>
+           
         </form>
+        
+		<div class="botones" > 
+					
+
+			<input type="button" id="lischequeo" value="Chequeo"   />		
+        </div>
+        <br><br>
+        <div >Checkboxs seleccionados : <span id="arr"></span></div>
+        
     </div>
 </body>
 </html>
