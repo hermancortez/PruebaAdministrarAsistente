@@ -7,7 +7,7 @@
 
 	<title>Listado de Asesorias</title>
 	
-	<link rel="stylesheet" href="estilo.css" type="text/css">	
+	<link rel="stylesheet" href="css/estilo.css" type="text/css" id="estilo1">	
 	
 </head>
 
@@ -56,15 +56,67 @@
 				<td>20/11/2020</td>
 				<td>cesar celimen</td>
 				<td>Andrea Aviles</td>
-				<td><select class="form-control" name="tipoUsuario"  required data-error="Por favor selecciona una opci&oacute;n">
-                    <option></option>
-                    <option></option>  
-                    <option></option>                                                                                                                                
-                    <option></option>                                                                              
-                </select></td>
+				<td>
+					<select class="form-control" name="tipoUsuario"  required data-error="Por favor selecciona una opcion">
+                    	<option></option>
+                    	<option>Realizar una charla</option>  
+                    	<option>Optimizar recursos</option>                                                                                                                                
+						<option>Seguir el manual de seguridad</option>
+						<option>Seguir las normas sanitarias</option>
+						<option>Cumplir con las temperaturas adecuadas</option>                                                                              
+					</select> 
+
+				</td>
 			</tr>
 
 	   	</table>
-	</div>		
+		<br><br>
+
+	
+	</div>
+	
+
+	<div class="botones" > 
+					
+		<input type="button" id="boton_estilo1" value="Estilo"   />
+			
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var hojaCSS = $('#estilo1'), otroCSS = 'css/estilo2.css';
+			$ ('#boton_estilo1').click(function(){
+				hojaCSS.attr("href", otroCSS);
+			});
+		});
+	</script>
+	<br><br>
+	<div class="botones" > 
+				
+		<input type="button" id="boton_estilo2" value="Estilacho"   />
+			
+	</div>
+	<script>
+		$(document).ready(function(){
+			var hojaCSS = $('#estilo1'), otroCSS = 'css/estilo3.css';
+			$ ('#boton_estilo2').click(function(){
+				hojaCSS.attr("href", otroCSS);
+			});
+		});
+	</script>
+	<br><br>
+	<div class="botones" > 
+				
+		<input type="button" id="boton_estilo3" value="Estilucho"   />
+			
+	</div>
+	<script>
+		$(document).ready(function(){
+			var hojaCSS = $('#estilo1'), otroCSS = 'css/estilo4.css';
+			$ ('#boton_estilo3').click(function(){
+				hojaCSS.attr("href", otroCSS);
+			});
+		});
+	</script>		
 </body>
 </html>
