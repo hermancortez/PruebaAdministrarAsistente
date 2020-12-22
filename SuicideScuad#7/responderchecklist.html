@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
     <title>Listado de chequeos</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-	<!-- Template Main Stylesheets -->
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <!-- Template Main Stylesheets -->
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">	
+    <link rel="stylesheet" href="estilo.css" type="text/css">	
+</head>
+
+<body>
+    <div class="superior">
+        <nav>
+            Ingresar Accidentes |
+            <a href="index.html">Home</a>  |  
+            <a href="contacto.html">Contacto</a> | 
+            <a href="crearcapacitacion.html">Crear capacitacion</a> |
+            <a href="crearusuario.html">Crear usuario</a>  |
+            <a href="listarcapacitaciones.html">Listado capacitaciones</a> |
+            <a href="listadousuarios.html">Listado usuarios</a> |
+            <a href="listadovisitas.html">Listado visitas</a> |
+            <a href="listadoasesorias.html">Listado Asesorias</a> |
+            <a href="administrarasistente.html">Administrar Asistentes</a> |
+            <a href="listadopago.html">Listado Pagos</a> |
+            <a href="reportes.html">Reportes</a> |
+            <a href="login.html">Ingresa a tu Cuenta</a>
+        </nav> 
+
+        <div class="encabezado">    
+            <h1>Ingresar Accidente</h1>               
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <td><a href="#" id="confirm" class="btn btn-success" >chequeo</a></td>
 
     <script type="text/javascript">
-        
-        function addItem(){
-        var ul = document.getElementById('ul'); //ul
-        var li = document.createElement('li');//li
-        
-        var checkbox = document.createElement('input');
-            checkbox.type = "checkbox";
-            checkbox.value = 1;
-            checkbox.name = "todo[]";
-        
-        li.appendChild(checkbox);
-        
-        var text = document.getElementById('texto');
-        li.appendChild(document.createTextNode(text.value));
-        ul.appendChild(li); 
-
-        var button = document.getElementById('btn');
-        button.onclick = addItem;
-    }
-    </script>	
-
-</head>
-<body>
+        $(document).ready(function() {
+            $('[name="check[]"]').click(function() {               
+                var arr = $('[name="check[]"]:checked').map(function(){
+                    return this.value;
+                }).get();              
+                var str = arr.join(',');               
+                $('#arr').text(JSON.stringify(arr));              
+                $('#str').text(str);
+            });
+        });
+    </script>
 
     <div class="superior">
 		<nav> Listado de chequeos |
@@ -47,71 +64,25 @@
 
     <br><br>
 
-    <form class="FormaDeLista" id="form1" method="post" action="#" name="ListadoChek" onsubmit="return ValidarLista();">
+    <div class="formulario">
+        <form class="FormaDeLista" id="form1" method="post" action="#" name="ListadoChek" onsubmit="return ValidarLista();">
 
-        <input type="checkbox" name="checkbox" id="chk1"><label for="chk1">Temperaturas</label><br>
-        <input type="checkbox" name="checkbox" id="chk2"><label for="chk2">Zona Limpia</label><br>
-        <input type="checkbox" name="checkbox" id="chk3"><label for="chk3">Uso Mascarilla</label><br>
-        <input type="checkbox" name="checkbox" id="chk4"><label for="chk4">Contaminacion cruzada</label><br>
-        <input type="checkbox" name="checkbox" id="chk5"><label for="chk5">Sanitizacion</label><br>
-        <input type="checkbox" name="checkbox" id="chk6"><label for="chk6">Limpieza camarines</label><br>
-        <input type="checkbox" name="checkbox" id="chk7"><label for="chk7">Procedimiento de lavado de manos</label><br>
-        <input type="checkbox" name="checkbox" id="chk8"><label for="chk8">Limpieza de pisos</label><br>
-        <input type="checkbox" name="checkbox" id="chk9"><label for="chk9">Uso correcto de alcohol gel y desinfectantes</label><br>
-        <input type="checkbox" name="checkbox" id="chk10"><label for="chk10">Control de inventario y fechas</label><br>
-    
+            <input type="checkbox" name="check[]" value="Temperaturas" id="chk1"><label for="chk1">Temperaturas</label><br>
+            <input type="checkbox" name="check[]" value="Zona Limpia" id="chk2"><label for="chk2">Zona Limpia</label><br>
+            <input type="checkbox" name="check[]" value="Uso Mascarilla" id="chk3"><label for="chk3">Uso Mascarilla</label><br>
+            <input type="checkbox" name="check[]" value="Contaminacion cruzada" id="chk4"><label for="chk4">Contaminacion cruzada</label><br>
+            <input type="checkbox" name="check[]" value="Sanitizacion" id="chk5"><label for="chk5">Sanitizacion</label><br>
+            <input type="checkbox" name="check[]" value="Limpieza camarines" id="chk6"><label for="chk6">Limpieza camarines</label><br>
+            <input type="checkbox" name="check[]" value="Procedimiento de lavado de manos" id="chk7"><label for="chk7">Procedimiento de lavado de manosProcedimiento de lavado de manos</label><br>
+            <input type="checkbox" name="check[]" value="Limpieza de pisos" id="chk8"><label for="chk8">Limpieza de pisos</label><br>
+            <input type="checkbox" name="check[]" value="Uso correcto de alcohol gel y desinfectantes" id="chk9"><label for="chk9">Uso correcto de alcohol gel y desinfectantes</label><br>
+            <input type="checkbox" name="check[]" value="Control de inventario y fechas" id="chk10"><label for="chk10">Control de inventario y fechas</label><br>
+        
 
-        <br>
-    </form>
-
-    <div class="botones">
-        <br><br>
-        <button onclick="VerificarCheck()" type="button" id="btn" class="FormaList">Añadir Chequeo</button>
-
+            <br>
+            <div >Checkboxs seleccionados : <span id="arr"></span></div>
+        </form>
     </div>
-
-    <script>
-
-        /*  function ValidarLista(){
-
-            var elemento = document.forms["ListadoChek"]["checkbox"].checked;
-            
-            if(elemento==tru){
-                alert("Verifique Chequeos");
-                return false;
-            }else{
-                alert("Selecciona a lo menos 1 Chequeo");
-                return false;
-            }
-
-        }*/
-
-         var ValidarChek= function(){
-           
-           var bool = document.forms["ListadoChek"]["chck1"].checked;
-
-           /* var bool=confirm("¿Confirma los chequeos realizados?");*/
-
-            if(bool){
-                return  true;
-            }else{
-                alert("cancelo la solicitud");
-                return false;
-            }
-        }
-
-        var ul = document.getElementById('chk1');
-
-     /*   $("#confirm").click(function(){
-        var bool=confirm("Desea validar y modificar los chequeos de esta visita?");
-        if(bool){
-            return true;  
-        }else{
-            alert("cancelo la solicitud");
-            return false;                                       
-        }
-        });*/
-     </script>
 </body>
 </html>
 

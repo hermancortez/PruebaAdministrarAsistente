@@ -5,9 +5,11 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
     <title>Crear Asesorias</title>	
+    <link rel="stylesheet" href="estilo.css" type="text/css">	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/lis.acci.js"></script>
-	<link rel="stylesheet" href="estilo.css" type="text/css">	
-	
+	<link rel="stylesheet" href="css/estilo.css" type="text/css">
 </head>
 <body>
     <div class="superior">
@@ -32,12 +34,64 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#formulario").validate({                
+                rules: {
+                    idaccidente : {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 10000    
+                    },
+                    fecha: {
+                        required: true,
+                        number: true,
+                        min: 01-01-2010,
+                        max: 2050-12-31
+                    },
+                    hora: {
+                        required: true,
+                        number: true
+                    },
+                    lugar: {
+                        required: true,
+                        minlength: 0,
+                        maxlength: 150
+                    },
+                    origen:{
+                        required: true,
+                        minlength: 0,
+                        maxlength: 100
+                    },
+                    Consecuencias:{
+                        required: true,
+                        minlength: 0,
+                        maxlength: 100
+                    }
+                }
+            });
+            });           
+        </script>
+
+        <script type="text/javascript">
+                function ValidaLongitud(campo, longitudMaxima) {
+                    try {
+                        if (campo.value.length > (longitudMaxima - 1))
+                            return false;
+                        else
+                            return true;             
+                    } catch (e) {
+                        return false;
+                    }
+                }
+        </script>
+
     <div class="formulario">
-        <form method="post" action="#" id="formulario">
+        <form method="post" action="" id="formulario">
 
             <div class="campo">
                 <label for="idaccidente">ID Accidente</label>
-                <input type="number" id="idaccidente" required/>
+                <input type="number" id="idaccidente" min="1" max="10000" required/>
             </div>
 
             <div class="campo">
@@ -56,14 +110,14 @@
             <div class="campo">
                 <div class="en linea">
                     <label for="Lugar">Lugar del accidente:</label>
-                    <input type="text" id="lugar" required/>
+                    <input type="text" id="lugar" onkeypress="return ValidaLongitud(this, 150);" required/>
                 </div>
             </div>
 
             <div class="campo">
                 <div class="en-linea izquierdo">
                   <label for="Origen">Origen del accidente:</label>
-                  <input type="text" id="origen" required/>
+                  <input type="text" id="origen" onkeypress="return ValidaLongitud(this, 100);" required/>
                 </div>                        
             </div>
 
@@ -77,12 +131,12 @@
             <div class="campo">
                 <div class="en-linea izquierdo">
                   <label for="Consecuencias">Consecuencias:</label>
-                  <input type="text" id="Consecuencias" required/>
+                  <input type="text" id="Consecuencias" onkeypress="return ValidaLongitud(this, 100);" required/>
                 </div>                        
             </div>
 
             <div class="botones">
-                <input type="submit" id="boton-enviar" value="Enviar"/>
+                <input type="submit" class="submit" id="boton-enviar" value="Enviar"/>
                 <p class="mensaje" id="mensaje"></p>
             </div>
         </form>
